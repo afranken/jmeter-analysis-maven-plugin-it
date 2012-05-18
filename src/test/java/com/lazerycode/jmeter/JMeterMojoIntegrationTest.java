@@ -31,7 +31,7 @@ public class JMeterMojoIntegrationTest extends TestCase {
        * makes it easy to do this.
        */
       verifier = new Verifier( testDir.getAbsolutePath() );
-      //verifier.deleteArtifacts(GROUP_ID);
+      verifier.deleteArtifacts(GROUP_ID);
 
       /**
        * The Command Line Options (CLI) are passed to the
