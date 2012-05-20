@@ -10,7 +10,9 @@ When running the test, the jmeter-analysis-maven-plugin is executed with a JMete
 [Maven Verifier][1] then checks whether the plugin was executed without problems.
 
 
-Run the test with `mvn clean verify`.
+Run the test in module `jmeter-analysis-maven-plugin-it` with `mvn clean verify`.
+The Parent POM must be installed into local Maven repository in order for the test to work.
+Running `mvn clean install` in the workspace root will first install the parent and then invoke the test.
 
 
 [1]:    http://maven.apache.org/shared/maven-verifier/        "Maven Verifier Component"
