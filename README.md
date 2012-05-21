@@ -7,8 +7,13 @@ It contains a `pom.xml` with a full configuration for the [JMeter Analysis Maven
 
 When running the test, the jmeter-analysis-maven-plugin is executed with a JMeter test XML file and produces result files.
 
-[Maven Verifier][1] then checks whether the plugin was executed without problems.
+[Maven Verifier][1] then checks whether
+ * the plugin was executed successfully
+ * the maven log shows any ERRORS
+ * the maven log contains text that indicates that the jmeter-analysis-maven-plugin finished correctly
+ * that all files listed in `expected-results.txt` are present afterwards
 
+if any of the above is negative, the test fails.
 
 Run the test in module `jmeter-analysis-maven-plugin-it` with `mvn clean verify`.
 The Parent POM must be installed into local Maven repository in order for the test to work.
