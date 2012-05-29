@@ -7,7 +7,7 @@
 
   <artifactId>jmeter-analysis-maven-plugin-it-parent</artifactId>
   <groupId>com.lazerycode.jmeter</groupId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <description>
@@ -18,7 +18,7 @@
 
   <properties>
     <default.encoding>UTF-8</default.encoding>
-    <jmeter.analysis.maven.plugin.version>1.0-SNAPSHOT</jmeter.analysis.maven.plugin.version>
+    <jmeter.analysis.maven.plugin.version>${project.version}</jmeter.analysis.maven.plugin.version>
   </properties>
 
   <modules>
