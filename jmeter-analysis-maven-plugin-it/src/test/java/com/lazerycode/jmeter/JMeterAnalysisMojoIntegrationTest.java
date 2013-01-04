@@ -22,7 +22,10 @@ public class JMeterAnalysisMojoIntegrationTest extends TestCase {
     File testDir = ResourceExtractor.simpleExtractResources(getClass(),
             "/jmeter-analysis-maven-plugin-it-run");
 
-    runTest(testDir);
+    Verifier verifier = runTest(testDir);
+
+    //log should state that 790 requests are present in the JMeter test results file
+    verifier.verifyTextInLog("requests:             790");
 
   }
 
@@ -35,13 +38,33 @@ public class JMeterAnalysisMojoIntegrationTest extends TestCase {
     File testDir = ResourceExtractor.simpleExtractResources(getClass(),
             "/jmeter-analysis-maven-plugin-it-run-preservedirs");
 
-    runTest(testDir);
+    Verifier verifier = runTest(testDir);
+
+    //log should state that 790 requests are present in the JMeter test results file
+    verifier.verifyTextInLog("requests:             790");
+
+  }
+
+  /**
+   * Test jmeter-analysis-maven-plugin with requestGroups option
+   */
+  public void testJMeterMojoRequestGroups() throws Exception {
+
+    // The testdir is computed from the location of this file.
+    File testDir = ResourceExtractor.simpleExtractResources(getClass(),
+            "/jmeter-analysis-maven-plugin-it-run-requestgroups");
+
+    Verifier verifier = runTest(testDir);
+
+    //log should state that 132 and 658 requests are present in the JMeter test results file
+    verifier.verifyTextInLog("requests:             132");
+    verifier.verifyTextInLog("requests:             658");
 
   }
 
   //=====================================================================================================================
 
-  private void runTest(File testDirectory) throws Exception {
+  private Verifier runTest(File testDirectory) throws Exception {
     Verifier verifier;
 
     verifier = new Verifier(testDirectory.getAbsolutePath());
@@ -67,8 +90,7 @@ public class JMeterAnalysisMojoIntegrationTest extends TestCase {
     //also checks that Maven log does not contain "[ERROR]" elements
     verifier.verify(true);
 
-    //log should state that 790 requests are present in the JMeter test results file
-    verifier.verifyTextInLog("requests:             790");
+    return verifier;
   }
 
 }
