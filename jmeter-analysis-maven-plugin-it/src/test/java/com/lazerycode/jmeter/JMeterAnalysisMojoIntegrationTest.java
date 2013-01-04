@@ -13,37 +13,62 @@ import org.apache.maven.it.util.ResourceExtractor;
  */
 public class JMeterAnalysisMojoIntegrationTest extends TestCase {
 
+  /**
+   * Test jmeter-analysis-maven-plugin with minimal configuration
+   */
   public void testJMeterMojo() throws Exception {
 
-      Verifier verifier;
+    // The testdir is computed from the location of this file.
+    File testDir = ResourceExtractor.simpleExtractResources(getClass(),
+            "/jmeter-analysis-maven-plugin-it-run");
 
-      // The testdir is computed from the location of this file.
-      File testDir = ResourceExtractor.simpleExtractResources( getClass(), "/jmeter-analysis-maven-plugin-it-run");
+    runTest(testDir);
 
-      verifier = new Verifier( testDir.getAbsolutePath() );
+  }
 
-      /**
-       * The Command Line Options (CLI) are passed to the
-       * verifier as a list. This is handy for things like
-       * redefining the local repository if needed.
-       */
-      List<String> cliOptions = new ArrayList<String>();
-      //produce DEBUG output in case an error occurs and one would like to take a look at the log
-      cliOptions.add( "-X" );
-      //produce execution error messages (with stacktraces)
-      cliOptions.add( "-e" );
+  /**
+   * Test jmeter-analysis-maven-plugin with preserveDirectories option
+   */
+  public void testJMeterMojoPreserveDirs() throws Exception {
 
-      verifier.setCliOptions( cliOptions );
+    // The testdir is computed from the location of this file.
+    File testDir = ResourceExtractor.simpleExtractResources(getClass(),
+            "/jmeter-analysis-maven-plugin-it-run-preservedirs");
 
-      //call "mvn clean verify" for jmeter-analysis-maven-plugin-it-run
-      verifier.executeGoal( "clean" );
-      verifier.executeGoal( "verify" );
+    runTest(testDir);
 
-      //make sure that all expected files are created, see expected-results.txt
-      //also checks that Maven log does not contain "[ERROR]" elements
-      verifier.verify(true);
+  }
 
-      //log should state that 790 requests are present in the JMeter test results file
-      verifier.verifyTextInLog("requests:             790");
-    }
+  //=====================================================================================================================
+
+  private void runTest(File testDirectory) throws Exception {
+    Verifier verifier;
+
+    verifier = new Verifier(testDirectory.getAbsolutePath());
+
+    /**
+     * The Command Line Options (CLI) are passed to the
+     * verifier as a list. This is handy for things like
+     * redefining the local repository if needed.
+     */
+    List<String> cliOptions = new ArrayList<String>();
+    //produce DEBUG output in case an error occurs and one would like to take a look at the log
+    cliOptions.add("-X");
+    //produce execution error messages (with stacktraces)
+    cliOptions.add("-e");
+
+    verifier.setCliOptions(cliOptions);
+
+    //call "mvn clean verify" for jmeter-analysis-maven-plugin-it-run
+    verifier.executeGoal("clean");
+    verifier.executeGoal("verify");
+
+    //make sure that all expected files are created, see expected-results.txt
+    //also checks that Maven log does not contain "[ERROR]" elements
+    verifier.verify(true);
+
+    //log should state that 790 requests are present in the JMeter test results file
+    verifier.verifyTextInLog("requests:             790");
+  }
+
 }
