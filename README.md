@@ -2,6 +2,14 @@
 
 Integration test for the jmeter-analysis-maven-plugin.
 
+Build status
+------------
+Buildhive CI:
+[![Build Status](https://buildhive.cloudbees.com/job/afranken/job/jmeter-analysis-maven-plugin-it/badge/icon)](https://buildhive.cloudbees.com/job/afranken/job/jmeter-analysis-maven-plugin-it/)
+
+Description:
+------------
+
 The [Maven Verifier][1] is used to run the test.
 It contains a `pom.xml` with a full configuration for the [JMeter Analysis Maven Plugin][2].
 
