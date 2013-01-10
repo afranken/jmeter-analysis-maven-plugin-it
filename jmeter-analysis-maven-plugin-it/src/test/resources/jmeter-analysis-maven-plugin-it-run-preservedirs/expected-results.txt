@@ -1,5 +1,8 @@
 target/results/preserve/test.html
 target/results/preserve/test.txt
 target/results/preserve/test-durations-test.csv
+target/results/preserve/test-durations-test.html
 target/results/preserve/test-durations-test.png
 target/results/preserve/test-sizes-test.csv
+target/results/preserve/test-sizes-test.html
+target/results/preserve/test-sizes-test.png

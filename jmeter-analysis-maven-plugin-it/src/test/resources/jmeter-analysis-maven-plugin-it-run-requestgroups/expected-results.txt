@@ -1,8 +1,14 @@
 target/results/test.html
 target/results/test.txt
 target/results/new-durations-test.csv
+target/results/new-durations-test.html
 target/results/new-durations-test.png
 target/results/new-sizes-test.csv
+target/results/new-sizes-test.html
+target/results/new-sizes-test.png
 target/results/rest-durations-test.csv
+target/results/rest-durations-test.html
 target/results/rest-durations-test.png
 target/results/rest-sizes-test.csv
+target/results/rest-sizes-test.html
+target/results/rest-sizes-test.png
