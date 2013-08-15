@@ -47,6 +47,8 @@
 
               <preserveDirectories>true</preserveDirectories>
 
+              <!-- log output of JMeter process -->
+              <suppressJMeterOutput>false</suppressJMeterOutput>
               <!--
               Defines groups of requests by URL patterns,
               e.g. URIs starting with /mock/page are associated with group "pages". All analysis results are
