@@ -1,0 +1,8 @@
+target/results/täst.html
+target/results/täst.txt
+target/results/töst-durations-täst.csv
+target/results/töst-durations-täst.html
+target/results/töst-durations-täst.png
+target/results/töst-sizes-täst.csv
+target/results/töst-sizes-täst.html
+target/results/töst-sizes-täst.png
