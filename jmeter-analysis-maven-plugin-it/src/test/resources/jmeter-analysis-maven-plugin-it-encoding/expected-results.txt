@@ -1,8 +1,8 @@
-target/results/täst.html
-target/results/täst.txt
-target/results/töst-durations-täst.csv
-target/results/töst-durations-täst.html
-target/results/töst-durations-täst.png
-target/results/töst-sizes-täst.csv
-target/results/töst-sizes-täst.html
-target/results/töst-sizes-täst.png
+target/results/t%C3%A4st.html
+target/results/t%C3%A4st.txt
+target/results/t%C3%B6st-durations-t%C3%A4st.csv
+target/results/t%C3%B6st-durations-t%C3%A4st.html
+target/results/t%C3%B6st-durations-t%C3%A4st.png
+target/results/t%C3%B6st-sizes-t%C3%A4st.csv
+target/results/t%C3%B6st-sizes-t%C3%A4st.html
+target/results/t%C3%B6st-sizes-t%C3%A4st.png
