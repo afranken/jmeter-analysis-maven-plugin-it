@@ -1,8 +1,8 @@
-target/results/t%C3%A4st.html
-target/results/t%C3%A4st.txt
-target/results/t%C3%B6st-durations-t%C3%A4st.csv
-target/results/t%C3%B6st-durations-t%C3%A4st.html
-target/results/t%C3%B6st-durations-t%C3%A4st.png
-target/results/t%C3%B6st-sizes-t%C3%A4st.csv
-target/results/t%C3%B6st-sizes-t%C3%A4st.html
-target/results/t%C3%B6st-sizes-t%C3%A4st.png
+target/results/test.html
+target/results/test.txt
+target/results/t%C3%B6st-durations-test.csv
+target/results/t%C3%B6st-durations-test.html
+target/results/t%C3%B6st-durations-test.png
+target/results/t%C3%B6st-sizes-test.csv
+target/results/t%C3%B6st-sizes-test.html
+target/results/t%C3%B6st-sizes-test.png
