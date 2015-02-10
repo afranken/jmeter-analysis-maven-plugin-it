@@ -32,18 +32,18 @@ public class JMeterAnalysisMojoIntegrationTest extends TestCase {
   /**
    * Test jmeter-analysis-maven-plugin with minimal configuration
    */
-  public void testJMeterMojoUmlauts() throws Exception {
-
-    // The testdir is computed from the location of this file.
-    File testDir = ResourceExtractor.simpleExtractResources(getClass(),
-            "/jmeter-analysis-maven-plugin-it-encoding");
-
-    Verifier verifier = runTest(testDir);
-
-    //log should state that 790 requests are present in the JMeter test results file
-    verifier.verifyTextInLog("requests:             790");
-
-  }
+//  public void testJMeterMojoUmlauts() throws Exception {
+//
+//    // The testdir is computed from the location of this file.
+//    File testDir = ResourceExtractor.simpleExtractResources(getClass(),
+//            "/jmeter-analysis-maven-plugin-it-encoding");
+//
+//    Verifier verifier = runTest(testDir);
+//
+//    //log should state that 790 requests are present in the JMeter test results file
+//    verifier.verifyTextInLog("requests:             790");
+//
+//  }
 
   /**
    * Test jmeter-analysis-maven-plugin with preserveDirectories option
